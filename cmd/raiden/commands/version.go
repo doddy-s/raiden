@@ -11,11 +11,11 @@ import (
 )
 
 var (
-	appVersion = "1.0.0-alpha"
+	appVersion = "v1.0.0-beta.61"
 	appName    = `
- ____           
+ ____
 |  _ \ __ _(_) __| | ___ _ __
-| |_) / _' | |/ _' |/ _ \ '_ \ 
+| |_) / _' | |/ _' |/ _ \ '_ \
 |  _ < (_| | | (_| |  __/ | | |
 |_| \_\__,_|_|\__,_|\___|_| |_|
 `
@@ -29,7 +29,7 @@ Dependencies Information :
 Device Information :
 - Operating System : %s
 - Architecture     : %s
-- Cpu Number       : %v		
+- Cpu Number       : %v
 
 `
 )

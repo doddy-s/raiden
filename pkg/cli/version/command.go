@@ -128,13 +128,14 @@ func Run(currentVersion string) (isLatest bool, isUpdate bool, errUpdate error) 
 	return
 }
 
-func RunPackage(latestVersion string) error {
-	version, err := getVersion("go.mod", "github.com/sev-2/raiden")
+func RunPackage(currentVersion string) error {
+	latestVersion, err := FetchLatestVersion()
 	if err != nil {
-		return err
+		// Failed to fetch latest version, cancel checking update
+		return nil
 	}
 
-	if version == latestVersion {
+	if currentVersion == latestVersion {
 		return nil
 	}
 
